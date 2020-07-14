@@ -1,7 +1,32 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color: lightblue;
+    color: white;
+}
+
+.nav-links {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+.poke-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +60,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
