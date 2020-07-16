@@ -1,23 +1,21 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import {Link} from 'react-router-dom'
 
 function Nav() {
   return (
-    <nav>
-      <Link to="/"><h3>RPG Apps</h3></Link>
-      
-      <ul className="nav-links">
-        <Link to="/dice-roller"><li>Dice Roller</li></Link>
-        <Link to="/poke-list"><li>Pokemon List</li></Link>
-        <Link to="/battle-initiative"><li>Battle Initiative</li></Link>
+    <ul className="menu-links">
         <li>
-          <a href="https://youtu.be/Law7wfdg_ls?t=1441">
-          https://youtu.be/Law7wfdg_ls
-          </a>
+          <Link to="/dice-roller">Dice Roller</Link>
         </li>
+        <li>
+          {/* <Link to="/poke-list">Pokemon List</Link> */}
+          
+        </li>
+        <li>
+          <Link to="/battle-initiative">Battle Initiative</Link>
+        </li>    
       </ul>
-    </nav>
   );
 }
 

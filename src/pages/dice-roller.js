@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
+import '../App.scss';
 
 function DiceRoller() {
   return (
-    <div className="App">
-      <h1>Dice Roller</h1>
+    <div className="container">
+      <h1 className="bg-success">Dice Roller</h1>
     </div>
   );
 }

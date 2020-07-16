@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
+import '../App.scss';
 
 function BattleInit() {
   useEffect(() => {
@@ -10,7 +10,7 @@ function BattleInit() {
     console.log(data);
   }
   return (
-    <div className="App">
+    <div className="container">
       <h1>Battle Initiative</h1>
       
     </div>
