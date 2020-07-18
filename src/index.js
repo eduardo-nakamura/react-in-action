@@ -7,6 +7,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
+    <script src="https://apis.google.com/js/api.js"></script>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
