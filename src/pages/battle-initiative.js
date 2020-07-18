@@ -11,8 +11,8 @@ function BattleInit() {
     fetchItems()
   },[])
   const fetchItems = async () => {
-    const data = await fetch('https://spreadsheets.google.com/feeds/cells/18okNyKjrihgei9jqko5VTW13nt-TfzIEeJxiHX7xETA/1/public/full?alt=json');
-    console.log(data.response)
+    // const data = await fetch('https://spreadsheets.google.com/feeds/cells/18okNyKjrihgei9jqko5VTW13nt-TfzIEeJxiHX7xETA/1/public/full?alt=json');
+    // console.log(data.response)
     // setTeste(data)
     fetch('https://spreadsheets.google.com/feeds/cells/18okNyKjrihgei9jqko5VTW13nt-TfzIEeJxiHX7xETA/1/public/full?alt=json')
       .then(response => response.json())

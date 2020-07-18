@@ -33,7 +33,7 @@ function App() {
       </section>
      
         <div className={teste ? 'menu-show' : 'menu-hide'}>
-        <Nav ></Nav>
+          <Nav ></Nav>
         </div>
       
    
