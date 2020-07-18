@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/react-in-action/static/css/main.0d45b747.chunk.css",
+    "main.js": "/react-in-action/static/js/main.6153ee85.chunk.js",
+    "main.js.map": "/react-in-action/static/js/main.6153ee85.chunk.js.map",
+    "runtime-main.js": "/react-in-action/static/js/runtime-main.86b5e528.js",
+    "runtime-main.js.map": "/react-in-action/static/js/runtime-main.86b5e528.js.map",
+    "static/js/2.7e14693a.chunk.js": "/react-in-action/static/js/2.7e14693a.chunk.js",
+    "static/js/2.7e14693a.chunk.js.map": "/react-in-action/static/js/2.7e14693a.chunk.js.map",
+    "index.html": "/react-in-action/index.html",
+    "precache-manifest.bdc72275b2457aa09228c48b6b69bf3a.js": "/react-in-action/precache-manifest.bdc72275b2457aa09228c48b6b69bf3a.js",
+    "service-worker.js": "/react-in-action/service-worker.js",
+    "static/css/main.0d45b747.chunk.css.map": "/react-in-action/static/css/main.0d45b747.chunk.css.map",
+    "static/js/2.7e14693a.chunk.js.LICENSE.txt": "/react-in-action/static/js/2.7e14693a.chunk.js.LICENSE.txt",
+    "static/media/custom.svg": "/react-in-action/static/media/custom.c480e6fb.svg",
+    "static/media/d4.svg": "/react-in-action/static/media/d4.6b89f59d.svg",
+    "static/media/dice10.svg": "/react-in-action/static/media/dice10.43189fd4.svg",
+    "static/media/dice100.svg": "/react-in-action/static/media/dice100.71e7a6e6.svg",
+    "static/media/dice12.svg": "/react-in-action/static/media/dice12.612bc232.svg",
+    "static/media/dice20.svg": "/react-in-action/static/media/dice20.a6407763.svg",
+    "static/media/dice4.svg": "/react-in-action/static/media/dice4.0b5e9ddd.svg",
+    "static/media/dice6.svg": "/react-in-action/static/media/dice6.29b34da3.svg",
+    "static/media/dice8.svg": "/react-in-action/static/media/dice8.868649f0.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.86b5e528.js",
+    "static/js/2.7e14693a.chunk.js",
+    "static/css/main.0d45b747.chunk.css",
+    "static/js/main.6153ee85.chunk.js"
+  ]
+}
