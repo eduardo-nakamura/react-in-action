@@ -1,3 +1,4 @@
+$breakpoint-tablet: 900px;
 @import url('https://fonts.googleapis.com/css?family=Alata|Open+Sans|Trade+Winds&display=swap');
 .AppContainer {
     background-color: lightcoral;
@@ -26,6 +27,12 @@
 .section {
     background-color: red;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dices-type {
+    background-color: blue;
 }
 
 .header-app {
@@ -46,13 +53,11 @@
 }
 
 .menu-hide {
-    width: 0px;
-    transition: width 0.2s;
+    display: none;
 }
 
 .menu-show {
-    width: 200px;
-    transition: width 0.2s;
+    display: block;
 }
 
 .menu-links {
@@ -91,8 +96,25 @@
 
 // Dice Roller
 .w3-table {
-    width: 50%;
+    // width: 50%;
     background-color: green;
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .menu-show,
+    .menu-links {
+        width: 100px;
+    }
+    .section {
+        flex-direction: column;
+    }
+    // .menu-show {
+    //     position: fixed;
+    //     top: 65px
+    // }
+    // .container {
+    //     width: 100%;
+    // }
 }
 
 
