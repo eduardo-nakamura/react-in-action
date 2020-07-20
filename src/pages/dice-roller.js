@@ -29,6 +29,7 @@ function DiceRoller() {
   const [diceHist,setDiceHist] = useState([])
   function rollDiceResult(){    
     let diceResults2 = []
+    setDiceObj([]);
     Object.keys(diceOb).forEach(key => {       
       let diceResults = []
       for(let i=0; i < diceOb[key].diceQuant; i++){
@@ -39,8 +40,7 @@ function DiceRoller() {
       }      
       diceResults2.push(diceResults)
     })
-    console.log(diceResults2.toString())
-    setDiceObj([]);
+    console.log(diceResults2.toString())    
     setDiceRolled(diceResults2)
     setDiceHist(diceHist.concat(diceResults2))
   }
@@ -82,7 +82,7 @@ function DiceRoller() {
         <img onClick={() => setDiceObj(diceOb.concat(dice10)) }  src={diceTenImg} alt=""/>
         <img onClick={() => setDiceObj(diceOb.concat(dice12)) }  src={diceTwelveImg} alt=""/>
         <img onClick={() => setDiceObj(diceOb.concat(dice20)) }  src={diceTwentyImg} alt=""/>
-        <img onClick={() => setDiceObj(diceOb.concat(dice100)) }  src={diceHundredImg} alt=""/>
+        <img onClick={() => setDiceObj(diceOb.concat(dice20)) }  src={diceHundredImg} alt=""/>
         <img onClick={() => setDiceObj(diceOb.concat(empty)) }  src={diceCustomImg} alt=""/>
         {/* <FaRegQuestionCircle style={{color: "white"}} size={50} onClick={() => setDiceObj(diceOb.concat(empty)) }/> */}
         {/* <img onClick={() => setDiceObj(diceOb.concat(dice100)) } style={{width: "50px"}} src={diceHundredImg} alt=""/> */}
