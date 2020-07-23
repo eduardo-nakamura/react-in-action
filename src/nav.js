@@ -14,6 +14,9 @@ function Nav() {
         </li>
         <li>
           <Link to="/battle-initiative">Battle Initiative</Link>
+        </li> 
+        <li>
+          <Link to="/game-hooks">Game Hooks</Link>
         </li>    
       </ul>
   );

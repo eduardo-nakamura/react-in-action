@@ -4,6 +4,7 @@ import './App.scss';
 import Nav from './nav';
 // import Header from './header';
 import DiceRoller from './pages/dice-roller';
+import GameHooks from './pages/game-hooks';
 import Home from './pages/home';
 import PokemonsList from './poke-list';
 import BattleInit from './pages/battle-initiative';
@@ -44,6 +45,7 @@ function App() {
           <Route path="/poke-list" component={PokemonsList}/>
           <Route path="/poke-list/:id" component={PokemonsDetail}/>
           <Route path="/battle-initiative" component={BattleInit}/> 
+          <Route path="/game-hooks" component={GameHooks}/> 
         </Switch> 
       </div>
     </Router>

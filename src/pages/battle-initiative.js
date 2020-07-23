@@ -17,7 +17,7 @@ function BattleInit() {
     fetch('https://spreadsheets.google.com/feeds/cells/18okNyKjrihgei9jqko5VTW13nt-TfzIEeJxiHX7xETA/1/public/full?alt=json')
       .then(response => response.json())
       .then(jsonData => {
-  
+        
         if( jsonData != null){
           let testeArray = []
           for(let i=0; i < jsonData.feed.entry.length; i++){
@@ -26,7 +26,7 @@ function BattleInit() {
             inputValue: "teste"
             row: "2"
             */
-            
+            console.log(jsonData.feed.entry)
             if (i>1){              
               if ( i % 2 == 0) {               
                 let newArr = {"name": null, "diceRoll": null, "bonusInit": null}; 
