@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.scss';
 // Components
+import Box from '@material-ui/core/Box';
 import Nav from './nav';
 // import Header from './header';
 import DiceRoller from './pages/dice-roller';
@@ -20,11 +21,11 @@ import { AiOutlineMenu } from 'react-icons/ai'
 // };
 
 function App() {
-  const [teste,setTeste] = useState(false)
+  const [teste,setTeste] = useState(true)
 
   return (
     <Router>     
-      <div className="AppContainer">
+      <div className="">
       <section className="header-app">
         <AiOutlineMenu style={{color: "white"}} onClick={() => setTeste(!teste)}></AiOutlineMenu>
         <Link to="/">
@@ -32,14 +33,14 @@ function App() {
         </Link>
         <AiOutlineMenu style={{opacity: 0}} ></AiOutlineMenu>
       </section>
-     
-        <div className={teste ? 'menu-show' : 'menu-hide'}>
-          <Nav ></Nav>
-        </div>
+
+      <Box display="flex"  bgcolor="background.paper">
       
-   
-      
-        <Switch className="Container">
+        <Box color="white" bgcolor="red" display="flex">
+        <Nav ></Nav>
+        </Box>
+        <Box  flexGrow={2}  color="white" bgcolor="red" display="flex">
+        <Switch >
           <Route path="/" exact component={Home}/>
           <Route path="/dice-roller" component={DiceRoller}/>
           <Route path="/poke-list" component={PokemonsList}/>
@@ -47,6 +48,28 @@ function App() {
           <Route path="/battle-initiative" component={BattleInit}/> 
           <Route path="/game-hooks" component={GameHooks}/> 
         </Switch> 
+     
+        </Box>
+      </Box>
+
+{/*       
+      <div className={teste ? 'container-nav menu-hide' : ' container-nav menu-show'} >
+      <Nav ></Nav>
+      </div>
+        
+      
+   
+      <div className="container">
+      <Switch >
+          <Route path="/" exact component={Home}/>
+          <Route path="/dice-roller" component={DiceRoller}/>
+          <Route path="/poke-list" component={PokemonsList}/>
+          <Route path="/poke-list/:id" component={PokemonsDetail}/>
+          <Route path="/battle-initiative" component={BattleInit}/> 
+          <Route path="/game-hooks" component={GameHooks}/> 
+        </Switch> 
+      </div> */}
+     
       </div>
     </Router>
     

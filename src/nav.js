@@ -8,10 +8,7 @@ function Nav() {
         <li>
           <Link to="/dice-roller">Dice Roller</Link>
         </li>
-        <li>
-          {/* <Link to="/poke-list">Pokemon List</Link> */}
-          
-        </li>
+    
         <li>
           <Link to="/battle-initiative">Battle Initiative</Link>
         </li> 

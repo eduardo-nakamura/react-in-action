@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import '../App.scss';
 import { FaBatteryEmpty } from 'react-icons/fa';
 import Button from '@material-ui/core/Button';
+import Container from '@material-ui/core/Container';
+import Box from '@material-ui/core/Box';
 
 function GameHooks() { 
   const [allHooks,setAllHooks] = useState([])
@@ -32,15 +34,28 @@ function GameHooks() {
   }
 
   return (
-    <div className="container">
-      <h1>Game Hooks</h1>
+    // <div className="container">
+    //   <h1>Game Hooks</h1>
    
-      <p style={{color:"white"}}>{allHooks[randomRumber]}</p>
+    //   <p style={{color:"white"}}>{allHooks[randomRumber]}</p>
       
-      <Button variant="outlined" color="primary" onClick={() => setRandomRumber(getRandomInt(allHooks.length))} >
-        Outro
-      </Button>
-    </div>
+    //   <Button variant="outlined" color="primary" onClick={() => setRandomRumber(getRandomInt(allHooks.length))} >
+    //     Outro
+    //   </Button>
+    // </div>
+    <Container width={1} >
+        <h1>Game Hooks</h1>
+        <Box width={1} display="flex" flexDirection="column"  bgcolor="background.paper">
+          <Box width={1}  color="white" bgcolor="blue" >
+            {allHooks[randomRumber]}
+          </Box>
+          <Box width={1} color="white" bgcolor="red">
+            <Button variant="outlined" color="primary" onClick={() => setRandomRumber(getRandomInt(allHooks.length))} >
+                Outro
+            </Button>
+          </Box>
+        </Box>
+    </Container>
   );
 }
 
