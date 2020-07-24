@@ -5,6 +5,7 @@ import Box from '@material-ui/core/Box';
 import Nav from './nav';
 // import Header from './header';
 import DiceRoller from './pages/dice-roller';
+import LootGenerator from './pages/loot-generator'
 import GameHooks from './pages/game-hooks';
 import Home from './pages/home';
 import PokemonsList from './poke-list';
@@ -47,6 +48,7 @@ function App() {
           <Route path="/poke-list/:id" component={PokemonsDetail}/>
           <Route path="/battle-initiative" component={BattleInit}/> 
           <Route path="/game-hooks" component={GameHooks}/> 
+          <Route path="/loot-generator" component={LootGenerator}/> 
         </Switch> 
      
         </Box>
