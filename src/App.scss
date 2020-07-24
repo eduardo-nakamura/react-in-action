@@ -1,5 +1,22 @@
 $breakpoint-tablet: 900px;
 @import url('https://fonts.googleapis.com/css?family=Alata|Open+Sans|Trade+Winds&display=swap');
+.header-app {
+    display: flex;
+    font-family: Trade Winds;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+    // padding: 0 20px;
+    width: 100% !important;
+    background-color: #262626;
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+}
+/* 
 .AppContainer {
     background-color: lightcoral;
     display: flex;
@@ -57,22 +74,7 @@ $breakpoint-tablet: 900px;
     }
 }
 
-.header-app {
-    display: flex;
-    font-family: Trade Winds;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 10vh;
-    // padding: 0 20px;
-    width: 100% !important;
-    background-color: #262626;
-    a {
-        color: white;
-        text-decoration: none;
-        font-weight: 100;
-        text-transform: uppercase;
-    }
-}
+
 
 .menu-hide {
     display: none;
@@ -81,7 +83,9 @@ $breakpoint-tablet: 900px;
 .menu-show {
     display: block;
 }
-
+body {
+    background-color: red;
+}
 .menu-links {
     display: flex;
     padding: 0;
@@ -115,7 +119,7 @@ $breakpoint-tablet: 900px;
     align-items: center;
 }
 
-// Dice Roller
+
 .w3-table {
     width: 50%;
     background-color: green;
@@ -152,17 +156,11 @@ $breakpoint-tablet: 900px;
             width: calc(100% / 4);
         }
     }
-    // .menu-show {
-    //     position: fixed;
-    //     top: 65px
-    // }
-    // .container {
-    //     width: 100%;
-    // }
+
 }
 
 
-/* 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

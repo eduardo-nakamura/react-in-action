@@ -36,10 +36,10 @@ function App() {
       </section>
 
       <Box display="flex"  bgcolor="background.paper">
-      
-        <Box color="white" bgcolor="red" display="flex">
+        {teste ? <Box color="white" bgcolor="red" display="flex">
         <Nav ></Nav>
-        </Box>
+        </Box> : null}
+        
         <Box  flexGrow={2}  color="white" bgcolor="red" display="flex">
         <Switch >
           <Route path="/" exact component={Home}/>
