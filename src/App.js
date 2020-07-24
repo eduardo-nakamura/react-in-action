@@ -35,12 +35,12 @@ function App() {
         <AiOutlineMenu style={{opacity: 0}} ></AiOutlineMenu>
       </section>
 
-      <Box display="flex"  bgcolor="background.paper">
+      <Box display="flex"  bgColor="background.paper">
         {teste ? <Box color="white" bgcolor="red" display="flex">
         <Nav ></Nav>
         </Box> : null}
         
-        <Box  flexGrow={2}  color="white" bgcolor="red" display="flex">
+        <Box  flexGrow={2}  color="white" bgcolor="gray" display="flex">
         <Switch >
           <Route path="/" exact component={Home}/>
           <Route path="/dice-roller" component={DiceRoller}/>

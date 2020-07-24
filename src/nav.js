@@ -78,7 +78,16 @@ function Nav() {
         </ListItem>
         </Link>
         
-        
+        <Link to="/loot-generator">
+        <ListItem
+          button
+          selected={selectedIndex === 3}
+          onClick={(event) => handleListItemClick(event, 3)}
+        >
+          
+          <ListItemText primary="Loot Generator" />
+        </ListItem>
+        </Link>
         
         
       </List>
