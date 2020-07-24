@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.scss';
 import {Link} from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
@@ -6,6 +6,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -19,6 +20,18 @@ const useStyles = makeStyles((theme) => ({
 function Nav() {
   const classes = useStyles();
   const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [currentHost, setCurrentHost] = useState()
+  // switch (window.location.pathname) {    
+  //   case '/dice-roller':
+  //     setCurrentHost(0)
+  //     break;
+  //   case '/battle-initiative':
+  //     setCurrentHost(1)
+  //     break;
+  //   case '/game-hooks':
+  //     setCurrentHost(2)
+  //     break;    
+  // }
 
   const handleListItemClick = (event, index) => {
     setSelectedIndex(index);
@@ -26,6 +39,7 @@ function Nav() {
 
   return (
     <div className={classes.root}>
+      {currentHost}
       <List component="nav" aria-label="main mailbox folders">
       <Link to="/dice-roller">
       <ListItem
