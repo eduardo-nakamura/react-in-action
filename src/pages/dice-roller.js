@@ -84,8 +84,7 @@ function DiceRoller() {
         <img onClick={() => setDiceObj(diceOb.concat(dice20)) }  src={diceTwentyImg} alt=""/>
         <img onClick={() => setDiceObj(diceOb.concat(dice20)) }  src={diceHundredImg} alt=""/>
         <img onClick={() => setDiceObj(diceOb.concat(empty)) }  src={diceCustomImg} alt=""/>
-        {/* <FaRegQuestionCircle style={{color: "white"}} size={50} onClick={() => setDiceObj(diceOb.concat(empty)) }/> */}
-        {/* <img onClick={() => setDiceObj(diceOb.concat(dice100)) } style={{width: "50px"}} src={diceHundredImg} alt=""/> */}
+    
       </div>
           <table class="w3-table">
             <tr>
@@ -143,8 +142,7 @@ function DiceRoller() {
           <button onClick={() => rollDiceResult() }>Rolar Dados</button>
       </div>
 
-      <div className="section">
-      {/* {JSON.stringify(diceOb)} - {diceOb.length} */}
+      <div className="section"> 
       {JSON.stringify(diceRolled)}
       </div>
 
