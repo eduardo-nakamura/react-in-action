@@ -10,7 +10,7 @@ function LootGenerator() {
   const [tabelaTreasure, setTabelaTreasure] = useState(null);
   const [nivelTreasure, setNivelTreasure] = useState(null);
   const [diceRoll, setDiceRoll] = useState(null);
-  const [resultTreasure, setResultTreasure] = useState();
+  const [resultTreasure, setResultTreasure] = useState([]);
   const handleChange = (event) => {
     // console.log(tabelaTreasure == '')
     switch(event.target.name) {
@@ -65,20 +65,45 @@ function LootGenerator() {
               lineArray = new Array              
             }           
           }
-          let rolledLine =  testeArray.filter(function(lvl) {
-            return lvl.diceRoll <= diceRoll;
-          });        
-          setResultTreasure(rolledLine.length === 1 ? rolledLine[0] : rolledLine.pop())     
-          calculateTreasure()
+          // let rolledLine =  testeArray.filter(function(lvl) {
+          //   return lvl.diceRoll <= diceRoll;
+          // });        
+          // setResultTreasure(rolledLine.length === 1 ? rolledLine[0] : rolledLine.pop())       
+          console.log(testeArray)       
+          calculateTreasure(testeArray)
         }        
       });
   }
 
   function rollTreasure() {
+    setResultTreasure()
     fetchItems()    
+    // if (resultTreasure){
+    //   calculateTreasure()
+    // }
   }
-  async function calculateTreasure(){
+  function sss(dicePrize,multiplyer){
+
+  }
+  async function calculateTreasure(res){    
+    let rolledLine =  res.filter(function(lvl) {
+      return lvl.diceRoll <= diceRoll;
+    }); 
+    rolledLine = rolledLine.length === 1 ? res[0] : rolledLine.pop()
+    console.log(rolledLine)
+    let reducer = (accumulator, currentValue) => accumulator + currentValue;
+    let query = ''
+    if(rolledLine["dicePrize1"]){      
+      // let dice = rolledLine["dicePrize1"].split("x")[0].split("d")
+      // let multiplyer = rolledLine["dicePrize1"].split("x")[1]
+      // let results = []
+      // for (let i = 0; i < dice[0]; i++){
+      //   results.push(rollDice(dice[1]))
+      // }   
+      // query += results.reduce(reducer) * parseInt(multiplyer) + ' ' + rolledLine["typePrize1"]          
+    }
     
+    setResultTreasure(query)
   }
 
   return (
