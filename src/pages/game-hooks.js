@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import '../App.scss';
 import { FaBatteryEmpty } from 'react-icons/fa';
-import Button from '@material-ui/core/Button';
-import Container from '@material-ui/core/Container';
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
+
+// Grid
+import { Grid,Box,Typography,Container,Button } from '@material-ui/core'
+
 
 function GameHooks() { 
   const [allHooks,setAllHooks] = useState([])
@@ -46,7 +46,19 @@ function GameHooks() {
     // </div>
     <Container width={1} >
         <h1>Game Hooks</h1>
-        <Box width={1} display="flex" flexDirection="column"  bgcolor="background.paper">
+        <Grid container spacing={3}>
+          <Grid item xs={8} >
+            <Box p={2} style={{backgroundColor:'red'}} >
+            {allHooks[randomRumber]}
+            </Box>
+          </Grid>
+          <Grid item xs={1} >
+          <Button variant="contained" color="primary" onClick={() => setRandomRumber(getRandomInt(allHooks.length))} >
+                Outro
+          </Button>
+          </Grid>
+        </Grid>
+        {/* <Box width={1} display="flex" flexDirection="column"  bgcolor="background.paper">
           <Box width={1}  color="white" bgcolor="blue" >
         
             <Typography variant="h4">    {allHooks[randomRumber]}</Typography>
@@ -57,7 +69,7 @@ function GameHooks() {
                 Outro
             </Button>
           </Box>
-        </Box>
+        </Box> */}
     </Container>
   );
 }

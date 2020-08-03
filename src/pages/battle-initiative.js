@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import '../App.scss';
 import { FaBatteryEmpty } from 'react-icons/fa';
+import { Container, Box, Radio,RadioGroup,FormControlLabel,FormControl,FormLabel,Button } from '@material-ui/core'
 
 function BattleInit() {
   
@@ -51,10 +52,13 @@ function BattleInit() {
       });
   }
   return (
-    <div className="container">
+    <Container width={1} >
       <h1>Battle Initiative</h1>
-      <p style={{color:"white"}}>{JSON.stringify(teste)}</p>
-    </div>
+      <Box display="flex" flexDirection="column">
+      {JSON.stringify(teste)}
+      </Box>
+    </Container>
+  
   );
 }
 

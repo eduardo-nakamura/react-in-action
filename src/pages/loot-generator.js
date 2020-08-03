@@ -2,11 +2,11 @@ import React, {useState, useEffect} from 'react';
 import '../App.scss';
 // import { FaBatteryEmpty } from 'react-icons/fa';
 import { rollDice } from '../shared/Utils'
-
+import  TabelaLoot  from '../components/TabelaLoot'
 
 import { Container, Box, Radio,RadioGroup,FormControlLabel,FormControl,FormLabel,Button } from '@material-ui/core'
 
-function LootGenerator() {
+function LootGenerator() {  
   const [tabelaTreasure, setTabelaTreasure] = useState(null);
   const [nivelTreasure, setNivelTreasure] = useState(null);
   const [diceRoll, setDiceRoll] = useState(null);
@@ -32,7 +32,7 @@ function LootGenerator() {
   },[])
   const fetchItems = async () => {
     let query = `https://spreadsheets.google.com/feeds/cells/1UtFW7HbxOdztEkd859i8yuw-gO5OYpKPJMKxhAPc0G8/${tabelaTreasure}/public/full?alt=json`    
-    setDiceRoll(rollDice(100))
+    setDiceRoll(rollDice(1))
     fetch(query)
       .then(response => response.json())
       .then(jsonData => {        
@@ -48,7 +48,8 @@ function LootGenerator() {
                   "diceRoll":Number,
                   "dicePrize1":String,
                   "typePrize1":String   
-                }                
+                }              
+               
                 line.diceRoll = parseInt(lineArray[1])
                 line.dicePrize1 = lineArray[2]
                 line.typePrize1 = lineArray[3]
@@ -64,12 +65,8 @@ function LootGenerator() {
               }                  
               lineArray = new Array              
             }           
-          }
-          // let rolledLine =  testeArray.filter(function(lvl) {
-          //   return lvl.diceRoll <= diceRoll;
-          // });        
-          // setResultTreasure(rolledLine.length === 1 ? rolledLine[0] : rolledLine.pop())       
-          console.log(testeArray)       
+          }       
+          console.log(JSON.stringify(testeArray[0]))
           calculateTreasure(testeArray)
         }        
       });
@@ -89,18 +86,17 @@ function LootGenerator() {
     let rolledLine =  res.filter(function(lvl) {
       return lvl.diceRoll <= diceRoll;
     }); 
-    rolledLine = rolledLine.length === 1 ? res[0] : rolledLine.pop()
-    console.log(rolledLine)
+    rolledLine = rolledLine.length === 1 ? res[0] : rolledLine.pop()    
     let reducer = (accumulator, currentValue) => accumulator + currentValue;
     let query = ''
     if(rolledLine["dicePrize1"]){      
-      // let dice = rolledLine["dicePrize1"].split("x")[0].split("d")
-      // let multiplyer = rolledLine["dicePrize1"].split("x")[1]
-      // let results = []
-      // for (let i = 0; i < dice[0]; i++){
-      //   results.push(rollDice(dice[1]))
-      // }   
-      // query += results.reduce(reducer) * parseInt(multiplyer) + ' ' + rolledLine["typePrize1"]          
+      let dice = rolledLine["dicePrize1"].split("x")[0].split("d")      
+      let multiplyer = rolledLine["dicePrize1"].split("x")[1] != undefined ? rolledLine["dicePrize1"].split("x")[1] : 1
+      let results = []
+      for (let i = 0; i < dice[0]; i++){
+        results.push(rollDice(dice[1]))
+      }   
+      query += results.reduce(reducer) * parseInt(multiplyer) + ' ' + rolledLine["typePrize1"]          
     }
     
     setResultTreasure(query)
@@ -108,6 +104,7 @@ function LootGenerator() {
 
   return (
     <Container width={1} >
+     
     <h1>Loot Generator</h1>
     <Box display="flex" flexDirection="column">
     <FormControl  component="fieldset">
@@ -139,6 +136,10 @@ function LootGenerator() {
 
     {JSON.stringify(resultTreasure)}
     {diceRoll}
+
+    <TabelaLoot prop={resultTreasure} >
+
+    </TabelaLoot>
     </Box>
         
         
